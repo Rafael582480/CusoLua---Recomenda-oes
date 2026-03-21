@@ -5,6 +5,30 @@ const youtubeApiClient = youtube({
     auth: process.env.YOUTUBE_API,
 });
 
+// Função auxiliar para buscar todas as páginas
+async function getAllPlaylistItems(playlistId: string): Promise<youtube_v3.Schema$PlaylistItem[]> {
+    const allItems: youtube_v3.Schema$PlaylistItem[] = [];
+    let nextPageToken: string | undefined;
+    
+    do {
+        const response = await youtubeApiClient.playlistItems.list({
+            maxResults: 50,
+            playlistId: playlistId,
+            part: ["snippet"],
+            pageToken: nextPageToken
+        });
+        
+        if (response.data.items) {
+            allItems.push(...response.data.items);
+        }
+        
+        nextPageToken = response.data.nextPageToken || undefined;
+        
+    } while (nextPageToken);
+    
+    return allItems;
+}
+
 export const APIyoutube = {
     course: {
         getAll: async () => {
@@ -40,26 +64,8 @@ export const APIyoutube = {
                     throw new Error(`Playlist com ID ${id} não encontrada`);
                 }
 
-                // Busca os itens da playlist
-                const classes: youtube_v3.Schema$PlaylistItem[] = [];
-                let nextPageToken: string | null | undefined = undefined;
-                let itemsResponse: any; // Usando any temporariamente para resolver o tipo complexo
-                
-                do {
-                    itemsResponse = await youtubeApiClient.playlistItems.list({
-                        maxResults: 50,
-                        playlistId: id,
-                        part: ["snippet"],
-                        pageToken: nextPageToken || undefined
-                    });
-                    
-                    if (itemsResponse.data.items) {
-                        classes.push(...itemsResponse.data.items);
-                    }
-                    
-                    nextPageToken = itemsResponse.data.nextPageToken;
-                    
-                } while (nextPageToken);
+                // Busca todos os itens da playlist usando a função auxiliar
+                const classes = await getAllPlaylistItems(id);
 
                 // Mapeia as aulas
                 const mappedClasses = classes
