@@ -35,7 +35,7 @@ export const APIyoutube = {
             const { data } = await youtubeApiClient.playlists.list({
                 maxResults: 50,
                 part: ["snippet"],
-                channelId: "UCQN2C-WALDxkxbD2VDyR2zQ",
+                channelId: process.env.CHANNEL_ID,
             });
 
             const courses = (data.items || [])?.map(item => ({
