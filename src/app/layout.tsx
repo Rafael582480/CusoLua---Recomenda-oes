@@ -2,10 +2,12 @@ import "./globals.css";
 import { Metadata } from "next";
 import {Header} from "@/src/components/header/Header";
 import { Footer } from "../components/footer/footer";
-import { config } from '@fortawesome/fontawesome-svg-core';
+import { config, library } from '@fortawesome/fontawesome-svg-core';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
 config.autoAddCss = false;
+library.add(faPlay);
 
 export const metadata: Metadata = {
   title: "CodarLua, voce vai dominar Lua e Love2D",

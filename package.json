@@ -16,7 +16,12 @@
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@fortawesome/react-fontawesome": "^3.3.0",
     "@googleapis/youtube": "^31.0.0",
+    "@monaco-editor/react": "^4.7.0",
+    "@prisma/client": "6.19",
+    "dotenv": "^17.3.1",
+    "lua-in-js": "^2.2.5",
     "next": "16.2.0",
+    "prisma": "6.19",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "simple-git": "^3.33.0"

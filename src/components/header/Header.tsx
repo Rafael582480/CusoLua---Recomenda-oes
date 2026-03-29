@@ -14,8 +14,8 @@ export function Header() {
                     <div className="data-[active=true]:shadow-[0px_1px_0px_#ffffff]" data-active={currentPath === "/"}>
                         <Link href='/'><li className="text-[var(--text-primary)] cursor-pointer transition hover:text-[var(--text-secundary)]">Cursos</li></Link>
                     </div>
-                    <div className="data-[active=true]:shadow-[0px_1px_0px_#ffffff]" data-active={currentPath === "/desafios"}>
-                        <Link href='/desafios'><li className="text-[var(--text-primary)] cursor-pointer transition hover:text-[var(--text-secundary)]">Desafios</li></Link>
+                    <div className="data-[active=true]:shadow-[0px_1px_0px_#ffffff]" data-active={currentPath === "/challenges"}>
+                        <Link href='/challenges'><li className="text-[var(--text-primary)] cursor-pointer transition hover:text-[var(--text-secundary)]">Desafios</li></Link>
                     </div>
                     <div className="data-[active=true]:shadow-[0px_1px_0px_#ffffff]" data-active={currentPath === "/projetos"}>
                         <Link href='/projetos'><li className="text-[var(--text-primary)] cursor-pointer transition hover:text-[var(--text-secundary)]">Projetos</li></Link>
