@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Description } from "@/src/components/description/Description";
-import { Textarea } from "@/src/components/textarea/Textarea";
+import { Description } from "@/components/description/Description";
+import { Textarea } from "@/components/textarea/Textarea";
 
 interface Challenge {
   id: string;

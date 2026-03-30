@@ -1,4 +1,4 @@
-import { prisma } from '@/src/app/lib/prisma';
+import { prisma } from '@/app/lib/prisma';
 import ChallengeSelectClient from './ChallengeSelectClient';
 import { notFound } from 'next/navigation';
 

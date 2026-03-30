@@ -1,6 +1,6 @@
 "use client";
 
-import { Play, Video } from "@/src/components/play/play";
+import { Play, Video } from "@/components/play/play";
 import { Watch_play } from "../watch/watch";
 import { useState } from "react";
 

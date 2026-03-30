@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Metadata } from "next";
-import {Header} from "@/src/components/header/Header";
+import {Header} from "@/components/header/Header";
 import { Footer } from "../components/footer/footer";
 import { config, library } from '@fortawesome/fontawesome-svg-core';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';

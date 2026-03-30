@@ -1,5 +1,5 @@
-import { getVideoData } from "../../../actions/video-actions";
-import { List_playlist } from "@/src/components/list_playlist/list_playlist";
+import { getVideoData } from "@/app/actions/video-actions";
+import { List_playlist } from "@/components/list_playlist/list_playlist";
 
 interface Props {
     params: { id: string }

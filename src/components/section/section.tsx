@@ -1,4 +1,4 @@
-import { IcardInfos, Card } from "@/src/components/cards/Card";
+import { IcardInfos, Card } from "@/components/cards/Card";
 
 interface IsectionInfos {
     items: IcardInfos[];

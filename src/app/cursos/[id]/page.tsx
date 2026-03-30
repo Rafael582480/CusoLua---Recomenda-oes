@@ -1,4 +1,4 @@
-import { APIyoutube } from "@/src/shared/services/api-youtube";
+import { APIyoutube } from "@/shared/services/api-youtube";
 import Link from "next/link";
 
 interface Props {

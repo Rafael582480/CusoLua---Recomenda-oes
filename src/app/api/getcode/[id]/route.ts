@@ -1,7 +1,7 @@
 // app/api/getcode/[id]/route.ts
 import { NextRequest, NextResponse } from 'next/server';
-import { DecompilerModule } from '@/src/app/modules/decompilerCode_Modulo';
-import { VerifyModulo } from '@/src/app/modules/verifyCode_Modulo';
+import { DecompilerModule } from '../../../modules/decompilerCode_Modulo';
+import { VerifyModulo } from '../../../modules/verifyCode_Modulo';
 
 export async function POST(
   request: NextRequest,

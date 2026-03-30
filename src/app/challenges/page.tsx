@@ -1,6 +1,6 @@
  "use client";
 
-import { OrganizationCard } from "@/src/components/organChallenges/organ";
+import { OrganizationCard } from "@/components/organChallenges/organ";
 import { useEffect, useState } from "react";
 
 interface IChallenge {
