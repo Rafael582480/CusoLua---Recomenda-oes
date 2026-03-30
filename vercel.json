@@ -1,0 +1,7 @@
+{
+  "buildCommand": "npm run vercel-build",
+  "installCommand": "npm install",
+  "env": {
+    "DATABASE_URL": "mongodb+srv://rafaelalvensdonacimento_db_user:4455@estudebem.msg7t4k.mongodb.net/CodigosLua?appName=EstudeBem"
+  }
+}
