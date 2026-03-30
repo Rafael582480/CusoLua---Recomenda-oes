@@ -25,7 +25,7 @@ export default async function ChallengePage({
 
     challenge = await prisma.code.findUnique({
       where: { id },
-        select: {
+      select: {
         id: true,
         nome: true,
         description: true,

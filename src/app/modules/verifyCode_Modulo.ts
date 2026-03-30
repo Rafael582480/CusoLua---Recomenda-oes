@@ -1,4 +1,4 @@
-import { prisma } from "@/src/app/lib/prisma";
+import { prisma } from '@/src/app/lib/prisma';
 
 export interface VerifyResult {
     sucess: boolean;

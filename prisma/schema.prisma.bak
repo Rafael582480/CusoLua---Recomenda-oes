@@ -1,0 +1,32 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider      = "prisma-client"
+  output        = "../node_modules/@prisma/client"
+  engineType    = "binary"
+  binaryTargets = ["native", "rhel-openssl-3.0.x", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Code {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  nome        String  @default("Desafio sem nome")
+  result      String 
+  description String
+  code_base   String
+  codes       Codes?  @relation(fields: [codesId], references: [id])
+  codesId     String? @db.ObjectId
+}
+
+model Codes {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  Codes Code[]
+}
