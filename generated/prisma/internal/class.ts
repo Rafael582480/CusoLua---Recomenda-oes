@@ -34,6 +34,14 @@ const config: runtime.GetPrismaClientConfig = {
         "fromEnvVar": null,
         "value": "debian-openssl-3.0.x",
         "native": true
+      },
+      {
+        "fromEnvVar": null,
+        "value": "rhel-openssl-3.0.x"
+      },
+      {
+        "fromEnvVar": null,
+        "value": "debian-openssl-3.0.x"
       }
     ],
     "previewFeatures": [],
@@ -47,6 +55,7 @@ const config: runtime.GetPrismaClientConfig = {
     "db"
   ],
   "activeProvider": "mongodb",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
@@ -55,8 +64,8 @@ const config: runtime.GetPrismaClientConfig = {
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Code {\n  id          String  @id @default(auto()) @map(\"_id\") @db.ObjectId\n  nome        String  @default(\"Desafio sem nome\")\n  result      String\n  description String\n  code_base   String\n  codes       Codes?  @relation(fields: [codesId], references: [id])\n  codesId     String? @db.ObjectId\n}\n\nmodel Codes {\n  id    String @id @default(auto()) @map(\"_id\") @db.ObjectId\n  Codes Code[]\n}\n",
-  "inlineSchemaHash": "e79c19a72025cdbb2453fe81dc5800692969fc56434e3c7b332f16a37bd5fe57",
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider      = \"prisma-client\"\n  output        = \"../generated/prisma\"\n  binaryTargets = [\"native\", \"rhel-openssl-3.0.x\", \"debian-openssl-3.0.x\"]\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Code {\n  id          String  @id @default(auto()) @map(\"_id\") @db.ObjectId\n  nome        String  @default(\"Desafio sem nome\")\n  result      String\n  description String\n  code_base   String\n  codes       Codes?  @relation(fields: [codesId], references: [id])\n  codesId     String? @db.ObjectId\n}\n\nmodel Codes {\n  id    String @id @default(auto()) @map(\"_id\") @db.ObjectId\n  Codes Code[]\n}\n",
+  "inlineSchemaHash": "a16c55175bed0e1b53e590da268bd6a920563facc1d133033acd572b728642aa",
   "copyEngine": true,
   "runtimeDataModel": {
     "models": {},
