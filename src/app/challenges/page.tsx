@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import { OrganizationCard } from "@/components/organChallenges/organ";
 import { useEffect, useState } from "react";
@@ -24,7 +24,6 @@ export default function ChallengesPage() {
             }
             const data = await response.json();
             setChallenges(data);
-            console.log('Desafios carregados:', data);
         } catch (err) {
             console.error('Erro:', err);
         }
