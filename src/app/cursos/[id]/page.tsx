@@ -23,7 +23,7 @@ export default async function PageCursoDetail({ params }: Props) {
                         <p className="text-[var(--text-secundary)]">{courseDetails.description}</p>
                     </div>
                     <div>
-                        <Link href={`/cursos/play/${url_watch}`}><button className="border border-black w-full mt-10 rounded-sm p-2 text-xl font-bold hover:bg-slate-700 cursor-pointer transition bg-slate-900 text-white">Começar Recomendação</button></Link>
+                        <Link href={`/cursos/play/${url_watch}`}><button className="border border-black w-full mt-10 rounded-sm p-2 text-xl bg-[#00C002] font-bold hover:bg-[#00C002] cursor-pointer transition text-white">Começar Recomendação</button></Link>
                     </div>
                 </div>
             </div>

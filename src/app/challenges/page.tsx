@@ -30,14 +30,11 @@ export default function ChallengesPage() {
     };
 
     return (
-        <div className="container mx-auto px-4 py-8">
-            <div className="text-center mb-12">
-                <h1 className="text-4xl text-white  font-bold mb-4">
-                    Desafios para você testar seu conhecimento!
+        <div className="w-full md:w-1/2 m-auto px-4 py-8">
+            <div className="mb-12 mt-12">
+                <h1 className="text-5xl font-mono text-white  font-bold mb-4">
+                    Desafios <span className="text-[#00E022]">Disponiveis!</span>
                 </h1>
-                <p className="text-gray-600  text-white text-lg">
-                    Escolha um desafio e escreva seu código Lua para testar sua solução
-                </p>
             </div>
 
             <div className="flex justify-center">

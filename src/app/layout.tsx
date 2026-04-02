@@ -10,8 +10,8 @@ config.autoAddCss = false;
 library.add(faPlay);
 
 export const metadata: Metadata = {
-  title: "CodarLua, voce vai dominar Lua e Love2D",
-  description: "CodarLua é um curso completo para aprender a programar em Lua e desenvolver jogos com Love2D. Com aulas práticas e projetos reais, você vai dominar as habilidades necessárias para criar seus próprios jogos e se destacar no mercado de desenvolvimento de jogos. Inscreva-se agora e comece sua jornada no mundo da programação de jogos!",
+  title: "CodeLua, voce vai dominar Lua e Love2D",
+  description: "CodeLua é um curso completo para aprender a programar em Lua e desenvolver jogos com Love2D. Com aulas práticas e projetos reais, você vai dominar as habilidades necessárias para criar seus próprios jogos e se destacar no mercado de desenvolvimento de jogos. Inscreva-se agora e comece sua jornada no mundo da programação de jogos!",
 };
 
 export default function RootLayout({
@@ -23,6 +23,7 @@ export default function RootLayout({
     <html
       lang="pt-br"
       className={`h-full antialiased`}
+      data-theme="dark"
     >
       <body className="min-h-full flex flex-col bg-[var(--background-color)]">
         <Header />

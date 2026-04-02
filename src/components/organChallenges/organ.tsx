@@ -6,7 +6,7 @@ interface challengesInfos {
 
 export function OrganizationCard({ desafios }: challengesInfos) {
     return (
-        <div className="w-2/3">
+        <div>
             <ul className="flex flex-col">
                 {desafios.map((item, index) => (
                     <li key={index}>

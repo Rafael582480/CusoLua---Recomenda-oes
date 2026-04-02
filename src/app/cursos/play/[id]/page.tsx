@@ -1,5 +1,6 @@
 import { getVideoData } from "@/app/actions/video-actions";
 import { List_playlist } from "@/components/list_playlist/list_playlist";
+import { APIyoutube } from "@/shared/services/api-youtube";
 
 interface Props {
     params: { id: string }
@@ -8,6 +9,7 @@ interface Props {
 export default async function watch({ params }: Props) {
     const { id } = await params;
     const course = await getVideoData(id);
+    const videosStats = await APIyoutube.course.getPlaylistVideosStats(id);
 
     return (
         <main>
@@ -16,9 +18,11 @@ export default async function watch({ params }: Props) {
                     infos={course.classGroup[0].classes.map((course, idx) => ({
                         index: idx,
                         title: course.title,
+                        description: course.description,
                     }))}
                     url={course.id}
                     course={course}
+                    videosStats={videosStats}
                 />
             </section>
         </main>

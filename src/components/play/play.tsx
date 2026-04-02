@@ -1,5 +1,7 @@
 "use client";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 export interface Video {
     index: number,
@@ -9,8 +11,8 @@ export interface Video {
 
 export function Play({ title }: Video) {
     return (
-        <div className="cursor-pointer border-b-2 border-[var(--color-shadow)] hover:bg-zinc-900 h-20 w-full text-[var(--text-secundary)] p-3 font-medium flex gap-4 items-center">
-            <i className="fa-solid fa-play"></i>
+        <div className="cursor-pointer h-20 w-full text-[var(--text-secundary)] font-medium flex gap-4 items-center">
+            <FontAwesomeIcon className="text-[#00E002]" icon={faPlay} />
             <h2 className="text-sm">{title}</h2>
         </div>
     );
