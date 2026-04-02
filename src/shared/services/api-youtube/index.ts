@@ -4,8 +4,12 @@ const youtubeApiClient = youtube({
     version: "v3",
     auth: process.env.YOUTUBE_API,
 });
+interface VideoStats {
+    views: string;
+    likes: string;
+    comment: string;
+}
 
-// Função auxiliar para buscar todas as páginas
 async function getAllPlaylistItems(playlistId: string): Promise<youtube_v3.Schema$PlaylistItem[]> {
     const allItems: youtube_v3.Schema$PlaylistItem[] = [];
     let nextPageToken: string | undefined;
