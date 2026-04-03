@@ -5,7 +5,6 @@ import { Watch_play } from "../watch/watch";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faComment, faEye } from "@fortawesome/free-solid-svg-icons";
-import { watch } from "fs";
 
 interface Course {
     classGroup: Array<{
