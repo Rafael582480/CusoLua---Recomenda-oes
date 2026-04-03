@@ -55,18 +55,18 @@ export function Header() {
             {menu === true ? (
                 <div className="flex">
                     <div className="w-2/3 h-screen top-0 z-9999 fixed bg-zinc-900">
-                        <div>
-                            <Link href="/"><h1 className="p-5 font-bold text-2xl text-[var(--text-primary)] rounded-lg">CODAR<span className="text-[var(--color-primary)]">LUA</span></h1></Link>
+                        <div className="p-5">
+                            <Link href="/"><h1 className="font-bold text-4xl text-[var(--text-primary)] rounded-lg">CODE<span className="text-[#00E002]">LUA</span></h1></Link>
                         </div>
                         <nav className="block">
                             <ul className="flex flex-col p-5 gap-4 text-base">
-                                <div className="data-[active=true]:shadow-[0px_1px_0px_#ffffff]" data-active={currentPath === "/"}>
+                                <div className="data-[active=true]:shadow-[0px_1px_0px_#00E022]" data-active={currentPath === "/"}>
                                     <Link href='/'><li className="text-[var(--text-primary)] cursor-pointer transition hover:text-[var(--text-secundary)]">Cursos</li></Link>
                                 </div>
-                                <div className="data-[active=true]:shadow-[0px_1px_0px_#ffffff]" data-active={currentPath === "/challenges"}>
+                                <div className="data-[active=true]:shadow-[0px_1px_0px_#00E022]" data-active={currentPath === "/challenges"}>
                                     <Link href='/challenges'><li className="text-[var(--text-primary)] cursor-pointer transition hover:text-[var(--text-secundary)]">Desafios</li></Link>
                                 </div>
-                                <div className="data-[active=true]:shadow-[0px_1px_0px_#ffffff]" data-active={currentPath === "/projetos"}>
+                                <div className="data-[active=true]:shadow-[0px_1px_0px_#00E022]" data-active={currentPath === "/projetos"}>
                                     <Link href='/projetos'><li className="text-[var(--text-primary)] cursor-pointer transition hover:text-[var(--text-secundary)]">Projetos</li></Link>
                                 </div>
                             </ul>

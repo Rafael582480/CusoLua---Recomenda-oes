@@ -10,7 +10,7 @@ export default async function Home() {
   const courses = await APIyoutube.course.getAll();
 
   return (
-    <main className="bg-[var(--background-color)]">
+    <main className="bg-[var(--background-color)] overflow-hidden">
       <section className="flex justify-center mt-10">
         <picture>
           <source
