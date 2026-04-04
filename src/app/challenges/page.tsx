@@ -35,7 +35,7 @@ export default function ChallengesPage() {
     return (
         <div className="w-full md:w-1/2 m-auto px-4 py-8">
             <div className="mb-12 mt-12">
-                <h1 className="text-5xl font-mono text-[var(--text-secondary)]  font-bold mb-4">
+                <h1 className="text-4xl md:text-5xl font-mono text-[var(--text-secondary)]  font-bold mb-4">
                     Desafios <span className="text-[#00E022]">Disponiveis!</span>
                 </h1>
             </div>
