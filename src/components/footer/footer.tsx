@@ -1,6 +1,6 @@
 export function Footer() {
     return (
-    <footer className="bg-[var(--background-color)] mt-10 p-10 text-center">
+    <footer className="bg-[var(--components-color)] mt-10 p-10 text-center">
             <div className="flex flex-col md:flex-row justify-center items-center gap-5">
                 <h1 className="font-bold text-4xl text-[var(--text-primary)] rounded-lg">CODE<span className="text-[#00E002]">LUA</span></h1>
                 

@@ -2,15 +2,17 @@
 
 import { OrganizationCard } from "@/components/organChallenges/organ";
 import { useEffect, useState } from "react";
+import gifLoad from "@/assets/image/Loading animation blue.gif";
 
 interface IChallenge {
-  id: string;
-  nome: string;
-  description: string;
+    id: string;
+    nome: string;
+    description: string;
 }
 
 export default function ChallengesPage() {
     const [challenges, setChallenges] = useState<IChallenge[]>([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetchChallenges();
@@ -24,6 +26,7 @@ export default function ChallengesPage() {
             }
             const data = await response.json();
             setChallenges(data);
+            setLoading(false);
         } catch (err) {
             console.error('Erro:', err);
         }
@@ -36,8 +39,10 @@ export default function ChallengesPage() {
                     Desafios <span className="text-[#00E022]">Disponiveis!</span>
                 </h1>
             </div>
-
-            <div className="flex justify-center">
+            <div className={`${loading === true ? "block" : "hidden"} flex justify-center`}>
+                <img src={gifLoad.src} alt="carregando..." />
+            </div>
+            <div className={`${loading === true ? "hidden" : "block"}flex justify-center`}>
                 <OrganizationCard
                     desafios={
                         challenges.map((item, index) => ({
