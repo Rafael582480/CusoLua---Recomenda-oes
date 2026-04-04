@@ -63,7 +63,7 @@ export default function ChallengeSelectClient({ id, initialChallenge }: Props) {
   };
 
   return (
-    <section className="w-full ">
+    <section className="w-full md:mt-5">
       <div className="flex flex-col md:flex-row justify-between gap-2 p-3 h-full">
         <Description
           nome={challenge.nome}
