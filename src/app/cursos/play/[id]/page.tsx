@@ -19,6 +19,7 @@ export default async function watch({ params }: Props) {
                         index: idx,
                         title: course.title,
                         description: course.description,
+                        id_video: course.videoId || "",
                     }))}
                     url={course.id}
                     course={course}
