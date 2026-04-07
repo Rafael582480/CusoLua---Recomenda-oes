@@ -5,7 +5,6 @@
 <p align="center">
   <a href="https://codelua.vercel.app">🌐 Acesse o Site</a> •
   <a href="https://github.com/Rafael582480/Codelua-Page/issues">🐛 Reportar Bug</a> •
-  <a href="https://apoia.se/codelua">💚 Apoiar Projeto</a>
 </p>
 
 ---
