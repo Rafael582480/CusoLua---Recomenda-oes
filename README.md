@@ -13,7 +13,7 @@
 
 **CodeLua** é uma plataforma gratuita para quem quer aprender programação com foco em Lua.
 
-Quando comecei a programar, percebi que o conteúdo bom estava espalhado, bagunçado, difícil de achar. Perdi muito tempo procurando o que estudar.
+Quando comecei a programar, percebi que o conteúdo bom estava espalhado, bagunçado, difícil de achar. Perdi muito tempo procurando o que estudar (mas eu fiz curso por isso facilitou ).
 
 Então fiz algo.
 
