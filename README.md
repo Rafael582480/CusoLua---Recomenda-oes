@@ -15,3 +15,4 @@ Então fiz algo.
 Criei o CodeLua: um site onde organizo cursos e desafios de programação em português. Tudo gratuito. Sem login e sem pedir cartão.
 
 Os vídeos não são meus — eu só organizo. Meu trabalho é facilitar o caminho para quem quer aprender.
+Caso queira me ajudar, entre em contato pelo Codelua.
